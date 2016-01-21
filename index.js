@@ -2,9 +2,9 @@ var express = require('express');
 var app = express();
 var bp = require('body-parser');
 
-app.use(bp.raw());
+app.use(bp.text());
 
-var state = {};
+var state = "";
 
 app.post('/set', function(req, res){
     console.dir(req.body);
